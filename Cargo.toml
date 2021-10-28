@@ -6,3 +6,8 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+hdk = "0.0.109"
+
+[features]
+default = ["mock"]
+mock = ["hdk/mock", "hdk/test_utils"]

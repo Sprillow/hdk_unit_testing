@@ -19,7 +19,6 @@ pub fn mock_hash_entry(mock_hdk: &mut MockHdkT, input: Entry, output: ExternResu
         .times(1)
         .return_const(output);
 }
-
 pub fn mock_create_link(
     mock_hdk: &mut MockHdkT,
     create_link_input: CreateLinkInput,
