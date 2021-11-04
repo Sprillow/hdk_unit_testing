@@ -53,3 +53,11 @@ pub fn mock_update(mock_hdk: &mut MockHdkT, expected_input: UpdateInput, expecte
         .times(1)
         .return_const(expected_output);
 }
+
+pub fn mock_get_links(mock_hdk: &mut MockHdkT, expected_input: Vec<GetLinksInput>, expected_output: ExternResult<Vec<Links>>) {
+    mock_hdk
+        .expect_get_links()
+        .with(mockall::predicate::eq(expected_input))
+        .times(1)
+        .return_const(expected_output);
+}
