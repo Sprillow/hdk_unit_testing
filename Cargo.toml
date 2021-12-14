@@ -1,5 +1,7 @@
 [package]
 name = "hdk_unit_testing"
+description = "Functions to help make mocking HDK native functions easier. Not complete, this is a work in progress"
+license = "GPL-2.0"
 version = "0.1.1"
 edition = "2018"
 
