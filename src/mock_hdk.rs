@@ -12,17 +12,18 @@ pub fn mock_create(
         .return_const(expected_output);
 }
 
-pub fn mock_hash_entry(
-    mock_hdk: &mut MockHdkT,
-    expected_input: Entry,
-    expected_output: ExternResult<EntryHash>,
-) {
-    mock_hdk
-        .expect_hash_entry()
-        .with(mockall::predicate::eq(expected_input))
-        .times(1)
-        .return_const(expected_output);
-}
+// pub fn mock_hash(
+//     mock_hdk: &mut MockHdkT,
+//     expected_input: HashInput,
+//     expected_output: ExternResult<HashOutput>,
+// ) {
+//     mock_hdk
+//         .expect_hash()
+//         .with(mockall::predicate::eq(expected_input))
+//         .times(1)
+//         .return_const(expected_output);
+// }
+
 pub fn mock_create_link(
     mock_hdk: &mut MockHdkT,
     expected_input: CreateLinkInput,
