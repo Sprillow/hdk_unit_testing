@@ -6,10 +6,10 @@ version = "0.1.4"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
-hdk = "0.0.134"
-
-[features]
-default = ["mock"]
-mock = ["hdk/mock", "hdk/test_utils"]
+# fixt = "0.0.13"
+fixt = { git = "https://github.com/holochain/holochain.git", rev = "d1ddbb3b505a1bf82b84e103f2ec8133cd48258e" }
+mockall = { version = "0.11.0" }
+# hdk = { version = "0.0.142", features = ["mock", "test_utils"] }
+hdk = { git = "https://github.com/holochain/holochain.git", rev = "d1ddbb3b505a1bf82b84e103f2ec8133cd48258e", features = ["mock", "test_utils"] }
+holochain_mock_hdi = { git = "https://github.com/holochain/holochain.git", rev = "d1ddbb3b505a1bf82b84e103f2ec8133cd48258e" }
